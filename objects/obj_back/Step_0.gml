@@ -4,10 +4,6 @@
 if (global.gameState == "deal"){
 	if(global.first){	
 		with(instance_id_get(global.cards_current)){
-			if(!done1){
-				audio_play_sound(snd_deal, 10, false);	
-				done1 = true;
-			}
 			startX = self.x;
 			startY = self.y;
 			self.progress = min(1, self.progress + (1 / (room_speed * duration)))
@@ -16,6 +12,7 @@ if (global.gameState == "deal"){
 			if(abs(self.x - locs[0][0]) <= 5 && abs(self.y - locs[0][1]) <=5){
 				self.x = locs[0][0];
 				self.y = locs[0][1];
+				audio_play_sound(snd_deal, 10, false);
 				global.first = false;
 				global.sec = true;
 				progress = 0;
@@ -24,10 +21,6 @@ if (global.gameState == "deal"){
 	}
 	if(global.sec){
 		with(instance_id_get(global.cards_current-1)){
-			if(!done2){
-				audio_play_sound(snd_deal, 10, false);	
-				done2 = true;
-			}
 			startX = x;
 			startY = y;
 			self.progress = min(1, self.progress + (1 / (room_speed * duration)))
@@ -37,7 +30,7 @@ if (global.gameState == "deal"){
 				self.x = locs[1][0];
 				self.y = locs[1][1];
 				progress = 0;
-				//audio_play_sound(snd_deal, 10, false);
+				audio_play_sound(snd_deal, 10, false);
 				global.sec = false;
 				global.third = true;
 			}
@@ -45,10 +38,6 @@ if (global.gameState == "deal"){
 	}
 	if(global.third){
 		with(instance_id_get(global.cards_current-2)){
-			if(!done3){
-				audio_play_sound(snd_deal, 10, false);	
-				done3 = true;
-			}
 			startX = self.x;
 			startY = self.y;
 			self.progress = min(1, self.progress + (1 / (room_speed * duration)))
@@ -57,7 +46,7 @@ if (global.gameState == "deal"){
 			if(abs(self.x - locs[2][0]) <= 5 && abs(self.y - locs[2][1]) <= 5){
 				self.x = locs[2][0];
 				self.y = locs[2][1];
-				//audio_play_sound(snd_deal, 10, false);
+				audio_play_sound(snd_deal, 10, false);
 				progress = 0;
 				global.third = false;
 				global.fourth = true;
@@ -66,10 +55,6 @@ if (global.gameState == "deal"){
 	}
 	if(global.fourth){
 		with(instance_id_get(global.cards_current-3)){
-			if(!done4){
-				audio_play_sound(snd_deal, 10, false);	
-				done4 = true;
-			}
 			startX = self.x;
 			startY = self.y;
 			self.progress = min(1, self.progress + (1 / (room_speed * duration)))
@@ -78,7 +63,7 @@ if (global.gameState == "deal"){
 			if(abs(self.x - locs[3][0]) <= 5 && abs(self.y - locs[3][1]) <=5){
 				self.x = locs[3][0];
 				self.y = locs[3][1];
-				//audio_play_sound(snd_deal, 10, false);
+				audio_play_sound(snd_deal, 10, false);
 				progress = 0;
 				global.fifth = true;
 				global.fourth = false;
@@ -87,10 +72,6 @@ if (global.gameState == "deal"){
 	}
 	if(global.fifth){
 		with(instance_id_get(global.cards_current-4)){
-			if(!done5){
-				audio_play_sound(snd_deal, 10, false);	
-				done5 = true;
-			}
 			startX = x;
 			startY = y;
 			self.progress = min(1,self.progress + (1 / (room_speed * duration)))
@@ -99,7 +80,7 @@ if (global.gameState == "deal"){
 			if(abs(self.x - locs[4][0]) <= 5 && abs(self.y - locs[4][1]) <=5){
 				self.x = locs[4][0];
 				self.y = locs[4][1];
-				//audio_play_sound(snd_deal, 10, false);
+				audio_play_sound(snd_deal, 10, false);
 				progress = 0;
 				global.sixth = true;
 				global.fifth = false;
@@ -108,10 +89,6 @@ if (global.gameState == "deal"){
 	}
 	if(global.sixth){
 		with(instance_id_get(global.cards_current-5)){
-			if(!done6){
-				audio_play_sound(snd_deal, 10, false);	
-				done6 = true;
-			}
 			startX = x;
 			startY = y;
 			self.progress = min(1, self.progress + (1 / (room_speed * duration)))
@@ -120,7 +97,7 @@ if (global.gameState == "deal"){
 			if(abs(self.x - locs[5][0]) <= 5 && abs(self.y - locs[5][1]) <=5){
 				self.x = locs[5][0];
 				self.y = locs[5][1];
-				//audio_play_sound(snd_deal, 10, false);
+				audio_play_sound(snd_deal, 10, false);
 				progress = 0;
 				global.seventh = true;
 				global.sixth = false;
@@ -129,10 +106,6 @@ if (global.gameState == "deal"){
 	}
 	if(global.seventh){
 		with(instance_id_get(global.cards_current-6)){
-			if(!done6){
-				audio_play_sound(snd_deal, 10, false);	
-				done6 = true;
-			}
 			startX = x;
 			startY = y;
 			self.progress = min(1, self.progress + (1 / (room_speed * duration)))
@@ -141,7 +114,7 @@ if (global.gameState == "deal"){
 			if(abs(self.x - locs[6][0]) <= 5 && abs(self.y - locs[6][1]) <=5){
 				self.x = locs[6][0];
 				self.y = locs[6][1];
-				//audio_play_sound(snd_deal, 10, false);
+				audio_play_sound(snd_deal, 10, false);
 				progress = 0;
 				global.eighth = true;
 				global.seventh = false;
@@ -150,10 +123,6 @@ if (global.gameState == "deal"){
 	}
 	if(global.eighth){
 		with(instance_id_get(global.cards_current-7)){
-			if(!done6){
-				audio_play_sound(snd_deal, 10, false);	
-				done6 = true;
-			}
 			startX = x;
 			startY = y;
 			self.progress = min(1, self.progress + (1 / (room_speed * duration)))
@@ -162,6 +131,7 @@ if (global.gameState == "deal"){
 			if(abs(self.x - locs[7][0]) <= 5 && abs(self.y - locs[7][1]) <=5){
 				self.x = locs[7][0];
 				self.y = locs[7][1];
+				audio_play_sound(snd_deal, 10, false);
 				progress = 0;
 				global.ninth = true;
 				global.eighth= false;
@@ -170,10 +140,6 @@ if (global.gameState == "deal"){
 	}
 	if(global.ninth){
 		with(instance_id_get(global.cards_current-8)){
-			if(!done6){
-				audio_play_sound(snd_deal, 10, false);	
-				done6 = true;
-			}
 			startX = x;
 			startY = y;
 			self.progress = min(1, self.progress + (1 / (room_speed * duration)))
@@ -182,7 +148,7 @@ if (global.gameState == "deal"){
 			if(abs(self.x - locs[8][0]) <= 5 && abs(self.y - locs[8][1]) <=5){
 				self.x = locs[8][0];
 				self.y = locs[8][1];
-				//audio_play_sound(snd_deal, 10, false);
+				audio_play_sound(snd_deal, 10, false);
 				progress = 0;
 				global.tenth = true;
 				global.ninth = false;
@@ -191,10 +157,6 @@ if (global.gameState == "deal"){
 	}
 	if(global.tenth){
 		with(instance_id_get(global.cards_current-9)){
-			if(!done6){
-				audio_play_sound(snd_deal, 10, false);	
-				done6 = true;
-			}
 			startX = x;
 			startY = y;
 			self.progress = min(1, self.progress + (1 / (room_speed * duration)))
@@ -203,7 +165,7 @@ if (global.gameState == "deal"){
 			if(abs(self.x - locs[9][0]) <= 5 && abs(self.y - locs[9][1]) <=5){
 				self.x = locs[9][0];
 				self.y = locs[9][1];
-				//audio_play_sound(snd_deal, 10, false);
+				audio_play_sound(snd_deal, 10, false);
 				progress = 0;
 				global.first = true;
 				global.tenth = false;
@@ -233,7 +195,7 @@ if(global.gameState == "handShow"){
 }
 
 if(global.gameState == "calculate"){
-	if(ds_list_size(global.cardPC) <= 1){
+	if(ds_list_size(global.cardPC) <= 1){	  
 		global.randomIndex = 0;
 	}else{
 		global.randomIndex = irandom(ds_list_size(global.cardPC) - 1);

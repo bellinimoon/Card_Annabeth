@@ -32,6 +32,7 @@ function Compare(PC, me){
 		}else if(PC == "spr_le"){
 			result[0] = 1;
 			result[1] = -2;
+			audio_play_sound(snd_always, 15, false);
 		}else if(PC == "spr_lv"){
 			result[0] = 3;
 			result[1] = -2;
@@ -52,6 +53,7 @@ function Compare(PC, me){
 			result[1] = -1;
 		}
 	}else if(me == "spr_hp"){
+		audio_play_sound(snd_harry, 15, false);
 		//2
 		if(PC == "spr_hp"){
 			result[0] = 0;
@@ -77,15 +79,19 @@ function Compare(PC, me){
 		}else if(PC == "spr_le"){
 			result[0] = -1;
 			result[1] = 3;
+			audio_play_sound(snd_avada, 15, false);
 		}else if(PC == "spr_ss"){
 			result[0] = -2;
 			result[1] = 3;
+			audio_play_sound(snd_avada, 15, false);
 		}else if(PC == "spr_ad"){
 			result[0] = -3;
 			result[1] = 3;
+			audio_play_sound(snd_avada, 15, false);
 		}else if(PC == "spr_hp"){
 			result[0] = 2;
 			result[1] = -3;
+			audio_play_sound(snd_vol, 15, false);
 		}
 	}
 	return result;

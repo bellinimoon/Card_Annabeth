@@ -1,16 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 back = true;
+audio_play_sound(snd_bg, 0, true);
 
-stone = false;
-done1 = false;
-done2 = false;
-done3 = false;
-done4 = false;
-done5 = false;
-done6 = false;
-done7 = false;
-done8 = false;
 spriteCard = "spr_back";
 global.gameState = "deal";
 global.choice = noone;
