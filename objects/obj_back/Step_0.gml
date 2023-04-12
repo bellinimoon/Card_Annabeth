@@ -278,7 +278,6 @@ if(global.gameState == "select"){
 if(global.gameState == "PCReveal"){
 	hover_ = true;
 	with(global.choice){
-		show_debug_message(ds_list_find_value(global.cards, count));
 		spriteCard = ds_list_find_value(global.cards, count);
 		global.valuePC = ds_list_find_value(global.cards, count);
 		global.gameState = "compare";

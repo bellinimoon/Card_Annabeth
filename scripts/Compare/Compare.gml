@@ -9,14 +9,14 @@ function Compare(PC, me){
 			result[0] = 0;
 			result[1] = 0;
 		}else if(PC == "spr_hp"){
-			result[0] = -2;
+			//result[0] = -2;
 			result[1] = 3;
 		}else if(PC == "spr_lv"){
-			result[0] = -3;
+			//result[0] = -3;
 			result[1] = 3;
 		}else if(PC == "spr_ss" || PC == "spr_le"){
 			result[0] = 2;
-			result[1] = -3;
+			//result[1] = -3;
 		}
 	}else if(me == "spr_ss"){
 		//2
@@ -24,18 +24,18 @@ function Compare(PC, me){
 			result[0] = 0;
 			result[1] = 0;
 		}else if(PC == "spr_ad"){
-			result[0] = -3;
+			//result[0] = -3;
 			result[1] = 2;
 		}else if(PC == "spr_hp"){
-			result[0] = -2;
+			//result[0] = -2;
 			result[1] = 2;
 		}else if(PC == "spr_le"){
 			result[0] = 1;
-			result[1] = -2;
+			//result[1] = -2;
 			audio_play_sound(snd_always, 15, false);
 		}else if(PC == "spr_lv"){
 			result[0] = 3;
-			result[1] = -2;
+			//result[1] = -2;
 		}
 	}else if(me == "spr_le"){
 		//1
@@ -43,14 +43,14 @@ function Compare(PC, me){
 			result[0] = 0;
 			result[1] = 0;
 		}else if(PC == "spr_ss"){
-			result[0] = -2;
+			//result[0] = -2;
 			result[1] = 1;
 		}else if(PC == "spr_lv" && PC == "spr_ad"){
 			result[0] = 3;
-			result[1] = -1;
+			//result[1] = -1;
 		}else if(PC == "spr_hp"){
 			result[0] = 2;
-			result[1] = -1;
+			//result[1] = -1;
 		}
 	}else if(me == "spr_hp"){
 		audio_play_sound(snd_harry, 15, false);
@@ -59,17 +59,17 @@ function Compare(PC, me){
 			result[0] = 0;
 			result[1] = 0;
 		}else if(PC == "spr_lv"){
-			result[0] = -3;
+			//result[0] = -3;
 			result[1] = 2;
 		}else if(PC == "spr_le"){
-			result[0] = -1;
+			//result[0] = -1;
 			result[1] = 2;
 		}else if(PC == "spr_ad"){
 			result[0] = 3;
-			result[1] = -2;
+			//result[1] = -2;
 		}else if(PC == "spr_ss"){
 			result[0] = 2;
-			result[1] = -2;
+			//result[1] = -2;
 		}
 	}else if(me == "spr_lv"){
 		//3
@@ -77,20 +77,20 @@ function Compare(PC, me){
 			result[0] = 0;
 			result[1] = 0;
 		}else if(PC == "spr_le"){
-			result[0] = -1;
+			//result[0] = -1;
 			result[1] = 3;
 			audio_play_sound(snd_avada, 15, false);
 		}else if(PC == "spr_ss"){
-			result[0] = -2;
+			//result[0] = -2;
 			result[1] = 3;
 			audio_play_sound(snd_avada, 15, false);
 		}else if(PC == "spr_ad"){
-			result[0] = -3;
+			//result[0] = -3;
 			result[1] = 3;
 			audio_play_sound(snd_avada, 15, false);
 		}else if(PC == "spr_hp"){
 			result[0] = 2;
-			result[1] = -3;
+			//result[1] = -3;
 			audio_play_sound(snd_vol, 15, false);
 		}
 	}
